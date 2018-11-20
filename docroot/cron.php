@@ -18,7 +18,7 @@ if (!isset($_GET['cron_key']) || variable_get('cron_key', 'drupal') != $_GET['cr
   drupal_access_denied();
 }
 elseif (variable_get('maintenance_mode', 0)) {
-  watchdog('cron', 'Cron could not run because the site is in maintenance mode.', array(), WATCHDOG_NOTICE);
+  watchdog('cron', 'Cron could not run because of the site is in maintenance mode.', array(), WATCHDOG_NOTICE);
   drupal_access_denied();
 }
 else {
